@@ -1,167 +1,175 @@
+// section visual
 .visual {
   height: 100vh;
-  background: url(https://images.unsplash.com/photo-1542393545-10f5cde2c810?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80) 60% 50% /cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1468436139062-f60a71c5c892?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') 50% 60% / cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
-
+  justify-content: center;
   .text {
-    color: #ffffff;
+    color: #fff;
     text-align: center;
-
-
     h2 {
       font-size: 20px;
       margin-bottom: 18px;
       letter-spacing: 1.3px;
-
     }
 
     h1 {
       font-size: 49px;
       padding-bottom: 50px;
-
     }
   }
 }
 
 
-//section bio
+
+// section bio
 .bio {
   margin-top: -200px;
   position: relative;
   margin-bottom: 100px;
   .bio-container {
+    display: flex;
+    align-items: center;
     max-width: 950px;
-    background: #ffffff;
+    background: #fff;
     margin: 0 auto;
     padding: 50px;
     border-radius: 6px;
-    box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-
-    .desc{
+    box-shadow:  10px 10px 100px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(100px);
+    transition:  1.2s;
+    .show-bio & {
+      opacity: 1;
+      transform: none;
+    }
+    .desc {
       flex: 5;
-
-      h2{
+      h2 {
         font-size: 32px;
         margin-bottom: 30px;
       }
-      p{
+      p {
         font-size: 20px;
-        color: #666666;
+        color: #666;
         line-height: 1.5;
       }
-      .sns-links{
+
+      .sns-links {
         margin-top: 24px;
-        a{
+        a {
           margin-right: 15px;
-          i{
+          i {
             font-size: 22px;
           }
         }
       }
     }
 
-    .photo{
+
+    .photo {
       flex: 4;
-      figure{
+      figure {
         margin: 0 auto;
         width: 300px;
         height: 300px;
         border-radius: 50%;
-        background: url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') 66% 0 /cover no-repeat;
+        background:  url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') 66% 0 / cover no-repeat;
       }
     }
-
   }
 }
 
-.works{
-  background: #ffffff;
+
+.works {
+  background: #fff;
   padding: 100px 0;
-  .title{
-    margin-bottom: 60px;
+  .title {
     text-align: center;
-    p{
+    margin-bottom: 60px;
+    p {
       color: #878787;
       font-size: 13px;
       margin-bottom: 15px;
       text-transform: uppercase;
     }
-    h2{
+    h2 {
       font-size: 30px;
       font-weight: bold;
-      color: #333333;
       text-transform: uppercase;
+      color: #333;
       padding-bottom: 30px;
       display: inline-block;
-
     }
   }
-  ul{
+
+  ul {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
-    li{
-      width: 33.333333%;
+    li {
+      width: 33.3333333%;
       padding: 15px;
-
     }
   }
-  .item{
-    .thumb{
+
+  .item {
+    .thumb {
       border-radius: 6px;
       overflow: hidden;
-      &:hover{
-        .img{
+      &:hover {
+        .img {
           transform: scale(1.1);
         }
       }
-      .img{
-        background:  url(https://api.surfit.io/v1/jobs/image/1371301495/cover?t=1592483924) 50% 50% /cover no-repeat;
+      .img {
+        background:  url('https://api.surfit.io/v1/jobs/image/553903934/cover?t=1592483559') 50% 50% / cover no-repeat;
         height: 250px;
-        transition: 2s;
+        transition:  1.5s;
+        &.puffcaster{
+          background-image: url(../images/caster.png);
+        }
+        &.marketer{
+          background-image: url(../images/marketer.png);
+        }
       }
     }
-    .desc{
+
+    .desc {
       padding: 22px 0;
-      h3{
+      h3 {
         font-size: 18px;
-        color: #111111;
+        color: #111;
         font-weight: 400;
         margin-bottom: 12px;
         text-transform: capitalize;
-
       }
-      h4{
+      h4 {
         font-size: 14px;
-        color: #111111;
+        color: #111;
         font-weight: 400;
         margin-bottom: 12px;
       }
-      p{
+
+      p {
         font-size: 14px;
         color: #717171;
         line-height: 1.4;
       }
-
     }
-
-
   }
-
 }
 
-#footer{
+
+#footer {
   height: 128px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f7f8f9;
-  p{
-    color: #666666;
+  p {
+    color: #666;
   }
 }
