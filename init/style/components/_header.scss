@@ -1,0 +1,36 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #ffffff;
+
+  .container{
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+      text-transform: capitalize;
+      font-size: 18px;
+
+    }
+    nav{
+      display: flex;
+      .nav-link{
+        display: flex;
+        padding: 10px 17px;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 14px;
+        &:hover{
+          color: $primary-coler;
+        }
+
+
+      }
+    }
+  }
+
+}
